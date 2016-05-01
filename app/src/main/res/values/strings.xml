@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="action_settings">Settings</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+     <!-- Errors -->
+    <string name="err_valid_email">Enter valid e-mail</string>
+    <string name="err_empty_pass">Enter your password</string>
+</resources>
