@@ -93,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                     }else{
-                        Snackbar.make(coordinatorLayout, "Login failed", Snackbar.LENGTH_LONG)
+                        Snackbar.make(btnLogin, "Login failed", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }
                 } catch (JSONException e) {
@@ -104,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Snackbar.make(coordinatorLayout, "Login failed", Snackbar.LENGTH_LONG)
+                Snackbar.make(btnLogin, "Login failed", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
             }

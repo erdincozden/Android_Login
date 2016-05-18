@@ -9,10 +9,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import app.login.com.R;
 import app.login.com.app.MyApplication;
+import app.login.com.model.User;
 
 public class MainActivity extends AppCompatActivity {
+
+    private TextView txtHello;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        User user=MyApplication.getInstance().getPreferenceManager().getUser();
+        txtHello=(TextView)findViewById(R.id.txtHello);
+        txtHello.setText("Hello "+user.getName()+ " Email: "+user.getEmail());
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
