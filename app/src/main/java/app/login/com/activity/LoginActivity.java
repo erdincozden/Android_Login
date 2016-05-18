@@ -92,6 +92,9 @@ public class LoginActivity extends AppCompatActivity {
                         MyApplication.getInstance().getPreferenceManager().storeUser(user);
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
+                    }else{
+                        Snackbar.make(coordinatorLayout, "Login failed", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
